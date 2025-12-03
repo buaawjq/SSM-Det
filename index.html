@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SSM-Det: State Space Model-based Object Detector for Intelligent Transportation System</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">SSM-Det: State Space Model-based Object Detector for Intelligent Transportation System</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href=" ">Jiaqi Wang</a><sup>1,3</sup>,</span>
+            <span class="author-block">
+              <a href=" ">Chunmian Lin</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href=" ">Kan Guo</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href=" ">Jiangang Guo</a><sup>3*</sup></span>
+            
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Beihang University,</span>
+            <span class="author-block"><sup>2</sup>Beijing University of Technology,</span>
+            <span class="author-block"><sup>3</sup>Fujian Agriculture and Forestry University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=" "
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/wangjq607-bot/SSM-Det"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered" style="margin-top: -4rem;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The State Space Model (SSM) has been a growth of interest in computer vision due to its long-term dependency modeling with linear complexity. Despite massive endeavor, it has not been extensively explored in intelligent transportation system (ITS) yet. In this paper, we propose State Space Model-based object Detector (SSM-Det), that is meticulously curated with Direction-aware Visual State Space Encoder (D-VSSE). Specifically, it customizes multi-path pixel exchange and patch re-arrangement via four-direction scanning mechanism, promoting for information communication. To bridge the information bottleneck across high-low level, we further design Split-Fusion (SF) and Skip-Connection (SC) modules for contextual feature propagation before decoding: SF performs multi-channel semantic separation and re-weighting in global-local scope, while SC is responsible for cross-layer feature interaction in a cascaded manner. Empirical studies is conducted on both VisDrone2019-DET and SEU_PML benchmarks, and our proposed SSM-Det reports the state-of-the-art performance against all counterparts by a substantial margin, while maintaining the real-time inference speed. We hope this work contributes to the in-depth investigation of SSM-based detector for intelligent transportation applications.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    
+  </div>
+</section>
+
+
+<!-- pipeline Section Example. -->
+    <div class="columns is-centered has-text-centered" >
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Pipeline</h2>
+        <div class="content has-text-justified">
+        </div>
+        
+        <!-- Image with caption -->
+        <div class="content has-text-centered">
+          <img src="static\images\pipeline.png"
+               alt="pipeline"
+               style="max-width: 70%; height: auto; border-radius: 10px; margin: 20px 0;">
+          <p class="has-text-centered" style="margin-top: 5px; font-style: normal; color: #000;">
+            The overall structure of State Space Model-based object Detector (SSM-Det), that is mainly composed of Backbone, Direction-aware Visual State-Space Encoder (D-VSSE), Split-Fusion (SF), Skip-Connection (SC), Transformer Decoder and Header. After feature extraction, D-VSSE performs the long-term dependency modeling at the expense of linear complexity, and SF-SC fuses multi-scale representations for cross-layer information interaction. Finally, Transformer Decoder adopts Uncertainty-minimal Query Selection and Detection Header for high-quality box prediction. The U, D and Rep mark Up-sampled, Down-sampled convolution and Re-parametrization.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ pipeline Section Example. -->
+
+<!-- Quantitative Results Example. -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Quantitative Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        
+        <!-- Image with caption -->
+        <div class="content has-text-centered">
+          <img src="static\images\table3.png"
+               alt="Visdrone 2019-DET"
+               style="max-width: 65%; height: auto; border-radius: 10px;">
+          <p class="has-text-centered" style="margin-top: 5px; font-style: normal; color: #000;">
+            (a) Performance comparisons with the state-of-the-arts on the Visdrone 2019-DET.
+        </div>
+        <div class="content has-text-centered">
+          <img src="static\images\table4.png"
+               alt="seu_pml"
+               style="max-width: 65%; height: auto; border-radius: 10px;">
+          <p class="has-text-centered" style="margin-top: 5px; font-style: normal; color: #000;">
+            (b) Performance comparisons with the state-of-the-arts on the SEU_PML dataset.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Quantitative Results Example. -->
+
+
+<!-- Quantitative Results Example. -->
+    <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Visualization</h2>
+        <div class="content has-text-justified">
+          <p>
+            
+          </p>
+        </div>
+        
+        <!-- Image with caption -->
+        <div class="content has-text-centered">
+          <img src="static\images\fig7-vis.jpg"
+               alt="Visdrone 2019-DET"
+               style="max-width: 65%; height: auto; border-radius: 10px;">
+          <p class="has-text-centered" style="margin-top: 5px; font-style: normal; color: #000;">
+            (a) Performance comparisons with the state-of-the-arts on the Visdrone 2019-DET.
+        </div>
+        <div class="content has-text-centered">
+          <img src="static\images\fig8-seu.jpg"
+               alt="seu_pml"
+               style="max-width: 65%; height: auto; border-radius: 10px;">
+          <p class="has-text-centered" style="margin-top: 5px; font-style: normal; color: #000;">
+            (b) Performance comparisons with the state-of-the-arts on the SEU_PML dataset.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Quantitative Results Example. -->
+  
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Datasets. -->
+    <div class="columns is-centered has-text-centered" style="margin-top: -2rem;">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Datasets</h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li>
+              <a href="https://github.com/VisDrone/VisDrone-Dataset" target="_blank">VisDrone2019-DET</a>
+            </li>
+            <li>
+              <a href="https://github.com/vvgoder/SEU_PML_Dataset" target="_blank">SEU_PML</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/ Datasets. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
