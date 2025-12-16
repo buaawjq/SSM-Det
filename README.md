@@ -36,5 +36,13 @@ This code draws inspiration from their work. We sincerely appreciate their excel
 - [VMamba](https://github.com/MzeroMiko/VMamba)
 #  Citation
 ```
-
+@ARTICLE{ssmdet2025wang,
+  author={Wang, Jiaqi and Lin, Chunmian and Guo, Kan and Guo, Jiangang},
+  journal={IEEE Transactions on Intelligent Transportation Systems}, 
+  title={SSM-Det: State Space Model-Based Object Detector for Intelligent Transportation System}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1-11},
+  doi={10.1109/TITS.2025.3640934}}
 ```
